@@ -14,16 +14,16 @@ const questions = [
         name: "username",
         message: "Enter your GitHub username:"
     },
-    // {
-    //     type: "input",
-    //     name: "title",
-    //     message: "Enter your project's title:"
-    // },
-    // {
-    //     type: "input",
-    //     name: "description",
-    //     message: "Add a short description of your project:"
-    // },
+    {
+        type: "input",
+        name: "title",
+        message: "Enter your project's title:"
+    },
+    {
+        type: "input",
+        name: "description",
+        message: "Add a short description of your project:"
+    },
     // {
     //     type: "input",
     //     name: "licence",
@@ -52,18 +52,20 @@ const questions = [
 ];
 
 function writeToFile(fileName, data) {
-   
+   return writeFileAsync(fileName,data);
 }
 
-function init() {
-    //ask questions
+async function init() {
+   
     try {
-        inquirer.prompt(questions)
-            .then(function (data) {
-                const data= 
-
-            })
-
+         //ask questions
+     const answers= await inquirer.prompt(questions);
+    
+    //construct markdown file
+     const formatContent=markDownFile(answers);
+        // console.log(formatContent);
+     writeToFile("README.MD", formatContent);
+    
     } catch (err) {
         console.log(err);
     }
