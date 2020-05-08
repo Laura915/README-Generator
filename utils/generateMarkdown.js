@@ -1,6 +1,6 @@
 function generateMarkdown(data) {
   return `
-(https://img.shields.io/static/v1?label=license&message=${data.license}&color=blue)
+  ![badge](https://img.shields.io/static/v1?label=licence&message=${data.license}&color=blue)
   # ${data.title}
 
 ## Description 
@@ -15,8 +15,8 @@ ${data.description}
 
 ## Installation
 To install the required dependencies, run the following command:
-${data.install}
-## Usagec
+${data.dependencies}
+## Usage
 ${data.usage}
 ## License
 ${data.license}
