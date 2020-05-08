@@ -1,18 +1,15 @@
-//bring in all files needed
+//req files, module
 const fs = require("fs");
 const util = require("util");
 const inquirer = require("inquirer");
 const markDownFile = require("./utils/generateMarkdown");
-
-
-const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
 
 const questions = [
     {
         type: "input",
         name: "username",
-        message: "Enter your GitHub username:"
+        message: "Enter your GitHub username:",
     },
     {
         type: "input",
@@ -22,22 +19,31 @@ const questions = [
     {
         type: "input",
         name: "description",
-        message: "Add a short description of your project:"
+        message: "Add a short description of your project:"  
     },
     {
-        type: "input",
+        type: "list",
         name: "license",
-        message: "What kind of licence does your project need:"
+        message: "What kind of licence does your project need:",
+        choices:[ 
+            "MIT", 
+            "APACHE2.0", 
+            "GPL3.0", 
+            "BSD3",
+            "None"
+        ]
     },
     {
         type: "input",
         name: "dependencies",
-        message: "What command should be run to insatll dependencies:"
+        message: "What command should be run to insatll dependencies:",
+        default: "npm i"
     },
     {
         type: "input",
         name: "test",
-        message: "What command should run to run test:"
+        message: "What command should be run to run test:",
+        default: "npm test"
     },
     {
         type: "input",
@@ -72,4 +78,3 @@ async function init() {
 }
 
 init();
-
