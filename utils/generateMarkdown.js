@@ -24,22 +24,21 @@ function generateMarkdown(data) {
   ## Installation
   To install required dependencies, run the following command:
 
-  \`\`\`
-  ${data.dependencies} 
-  \`\`\`
+  \`\`\`${data.dependencies}\`\`\`
 
   ## Usage
   ${data.usage}
+  
   ## License
   This project is licensed under the ${data.license} license
+  
   ## Contributing
   ${data.contributing}
+ 
   ## Test
   To run test, run the following command:
   
-  \`\`\`
-  ${data.test}
-  \`\`\`
+  \`\`\`${data.test}\`\`\`
   
   ## Questions
   If you have a question about this repo, open a issue or contact ${data.username} 

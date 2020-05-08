@@ -1,4 +1,3 @@
-//req files, module
 const fs = require("fs");
 const util = require("util");
 const inquirer = require("inquirer");
@@ -64,12 +63,10 @@ function writeToFile(fileName, data) {
 async function init() {
    
     try {
-         //ask questions
      const answers= await inquirer.prompt(questions);
-    
-    //construct markdown file
+
      const formatContent=markDownFile(answers);
-        // console.log(formatContent);
+
      writeToFile("README.MD", formatContent);
     
     } catch (err) {
