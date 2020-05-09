@@ -67,7 +67,7 @@ async function init() {
 
      const formatContent=markDownFile(answers);
 
-     writeToFile("README.MD", formatContent);
+     writeToFile("README.md", formatContent);
     
     } catch (err) {
         console.log(err);
