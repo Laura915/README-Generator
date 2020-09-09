@@ -4,7 +4,12 @@
   ![badge](https://img.shields.io/static/v1?label=licence&message=MIT&color=blue)
 
  ## Description 
- Creates a basic read me markdown file
+ A command-line application that generates a README markdown file from a user's inputs.
+
+  **User Story:** <br>
+    As a developer <br>
+    I want a README generator<br>
+    So that I can easily put together a good README for a new project 
 
   ## Table of Contents
 
@@ -26,13 +31,18 @@
   ```npm i```
 
   ## Usage
-  Saves time
+  To begin using run the following command:
+  
+  ```node index.js```
+
+  Then answer a series of questions about the repo and recieve an updated readme markdown file. 
   
   ## License
   This project is licensed under the MIT license
   
   ## Contributing
-  Projects will look better when use
+  To edit readme file make changes toe generateMarkdown.js file 
+  or edit or add questions in the index.js 
  
   ## Test
   To run test, run the following command:
@@ -41,5 +51,3 @@
   
   ## Questions
   If you have a question about this repo, open a issue or contact Laura915 
-
-  
